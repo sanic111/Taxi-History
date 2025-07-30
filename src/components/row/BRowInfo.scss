@@ -1,0 +1,34 @@
+@import "~@vnmfify/core/styles/variables";
+@import "~@vnmfify/core/styles/prefix";
+@import "../../styles/prefix";
+
+
+.brow-info-container {
+    width: calc(100vw - 56px *$hd);
+    height: auto;
+    min-height: 20px * $hd;
+    margin-top: 8px * $hd;
+    margin-left: 16px *$hd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .brow-info-text-title {
+        color: #404040;
+        font-weight: 400;
+        font-size: 13px *$hd;
+        max-width: calc(37.5vw - 21px);
+        white-space: pre-line;
+    }
+
+    .brow-info-text-value {
+        color: #404040;
+        font-weight: 400;
+        font-size: 14px *$hd;
+        max-width: calc(62.5vw - 36px);
+        white-space: pre-line;
+        text-align: end;
+    }
+
+}

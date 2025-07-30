@@ -1,0 +1,22 @@
+@import "~@vnmfify/core/styles/prefix";
+@import "~@vnmfify/core/styles/variables";
+@import "../../styles/prefix";
+
+.home-screen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    .item-list {
+        margin-left: 12px *$hd;
+    }
+
+    .item-content {
+        width: 120px *$hd;
+        height: 40px *$hd;
+        border-radius: 12px *$hd;
+        background-color: red;
+    }
+}

@@ -1,0 +1,52 @@
+@import "~@vnmfify/core/styles/variables";
+@import "~@vnmfify/core/styles/prefix";
+@import "../../styles/prefix";
+
+
+.base-popup-container {
+    height: max-content;
+    overflow: hidden;
+    border-radius: 24px *$hd 24px *$hd 0 0;
+    width: 100vw;
+    background-color: white;
+
+    .view-header-base-popup {
+        background-color: #024C3E;
+        height: 68px * $hd;
+        width: 100vw;
+
+        .row-header-base-popup {
+            height: 48px * $hd;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .title-base-popup {
+                color: white;
+                font-weight: 600;
+                font-size: 14px *$hd;
+            }
+
+
+        }
+
+        .icon-right-header-base-popup {
+            width: 12px *$hd;
+            height: 12px *$hd;
+            position: absolute;
+            right: 20px *$hd;
+            top: 20px *$hd
+        }
+
+        .icon-left-header-base-popup {
+            width: 12px *$hd;
+            height: 12px *$hd;
+            position: absolute;
+            left: 20px *$hd;
+            top: 20px *$hd
+        }
+
+    }
+}

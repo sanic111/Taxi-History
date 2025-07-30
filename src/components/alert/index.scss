@@ -1,0 +1,106 @@
+@import "~@vnmfify/core/styles/prefix";
+@import "~@vnmfify/core/styles/variables";
+@import "../../styles/prefix";
+
+
+.custom-dialog {
+  --dialog-header-padding-top: 24px * $hd;
+  --dialog-width: calc(100vw - 64px);
+  --dialog-border-radius: 16px;
+  --dialog-message-line-height: 28px * $hd;
+  z-index: 2000;
+
+  .view-bottom-button-alert {
+    height: 60px * $hd;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .button-alert {
+    height: 40px * $hd;
+    width: calc(50vw - 38px * $hd);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #FEDB2E;
+    border-radius: 12px * $hd;
+    margin-top: 8px *$hd;
+    border: 1px*$hd solid #FEDB2E;
+
+    // .left-title {
+    //   font-size: 14px * $hd;
+    //   font-weight: 500;
+    //   color: #8C9497;
+
+    // }
+
+    .text-title {
+      font-size: 14px * $hd;
+      font-weight: 500;
+      color: #00261E;
+    }
+  }
+
+  .right-button-alert {
+    height: 40px * $hd;
+    width: calc(100vw - 56px *$hd);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #FEDB2E;
+    border-radius: 12px * $hd;
+    margin-top: 8px *$hd;
+    border: 1px*$hd solid #FEDB2E;
+
+    // .left-title {
+    //   font-size: 14px * $hd;
+    //   font-weight: 500;
+    //   color: #8C9497;
+
+    // }
+
+    .text-title {
+      font-size: 14px * $hd;
+      font-weight: 500;
+      color: #00261E;
+    }
+  }
+
+  .vnmfify-dialog__header {
+    font-size: 16px * $hd;
+    height: 48px *$hd;
+  }
+
+  .vnmfify-dialog__message {
+    font-size: 14px * $hd;
+    padding: 0 16px * $hd 16px * $hd 16px * $hd;
+  }
+
+  .vnmfify-dialog__header+.vnmfify-dialog__content .vnmfify-dialog__message {
+    padding-top: 0;
+  }
+
+
+  .vnmfify-hairline,
+  .vnmfify-hairline--top {
+    position: unset;
+  }
+
+  .view-header-alert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 88px *$hd;
+    line-height: 24px *$hd;
+  }
+
+  .image-top-alert {
+    width: 40px *$hd;
+    height: 40px *$hd;
+    margin-bottom: 12px;
+  }
+
+
+}

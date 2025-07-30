@@ -1,0 +1,14 @@
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+
+# node.js
+#
+node_modules
+deploy
+dist
+npm-debug.log
+yarn-error.log

@@ -1,0 +1,64 @@
+@import "~@vnmfify/core/styles/prefix";
+@import "~@vnmfify/core/styles/variables";
+@import "../../styles/prefix";
+
+.#{$app-prefix}button-gradient {
+
+  width: calc(100vw - 76px * $hd);
+  height: 40px * $hd;
+
+  border-radius: 20px *$hd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #FEDB2E, #FEDB2E);
+
+  .title-button {
+    font-size: 16px * $hd;
+    color: #00261E;
+    font-weight: 500;
+  }
+
+
+}
+
+.sdkh-radient-vertical-button {
+  background-image: linear-gradient(to bottom, #FEDB2E, #FEDB2E);
+}
+
+.sdkh-radient-horizontal-button {
+  background-image: linear-gradient(to right, #FEDB2E, #FEDB2E);
+}
+
+.#{$app-prefix}button-border {
+
+  width: calc(100vw - 76px * $hd);
+  height: 38px * $hd;
+  border-radius: 20px *$hd;
+  border: 1px*$hd solid #C99500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title-button {
+    font-size: 16px * $hd;
+    color: #C99500;
+    font-weight: 500;
+  }
+
+  .image-button {
+    width: 24px * $hd;
+    height: 24px * $hd;
+    object-fit: contain;
+  }
+
+
+}
+
+.#{$app-prefix}button-gradient:active {
+  opacity: 0.3;
+}
+
+.#{$app-prefix}button-border:active {
+  opacity: 0.3;
+}

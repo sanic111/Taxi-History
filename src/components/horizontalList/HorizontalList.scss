@@ -1,0 +1,18 @@
+@import "~@vnmfify/core/styles/prefix";
+@import "~@vnmfify/core/styles/variables";
+@import "../../styles/prefix";
+
+.base-horizontal-list {
+    white-space: nowrap;
+    overflow: scroll;
+    width: auto;
+    height: auto;
+    scrollbar-width: none;
+
+    .base-item-list {
+        display: inline-flex;
+        width: auto;
+        height: auto;
+
+    }
+}

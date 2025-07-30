@@ -1,0 +1,100 @@
+@import "~@vnmfify/core/styles/prefix";
+@import "~@vnmfify/core/styles/variables";
+@import "../../styles/prefix";
+
+.wrap-input-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4px * $hd;
+}
+
+.base-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px * $hd;
+  min-height: 56px * $hd;
+  position: relative;
+  height: auto;
+  border: 1px*$hd solid #00723526;
+  width: calc(100vw - 26px *$hd);
+  border-radius: 8px *$hd;
+
+
+  .title-input-up {
+    color: #8C9497;
+    font-size: 16px * $hd;
+    font-weight: 400;
+    position: absolute;
+    top: 20px * $hd;
+    text-align: left;
+    transform: translateY(-20px * $hd) scale(0.75);
+    -webkit-transform-origin-x: 0;
+    -ms-transform-origin-x: 0;
+    transition: transform 0.3s ease-in-out;
+    left: 12px *$hd
+  }
+
+  .title-input-down {
+    color: #8C9497;
+    font-size: 16px * $hd;
+    font-weight: 400;
+    position: absolute;
+    text-align: left;
+    top: 16px * $hd;
+    -webkit-transform-origin-x: 0;
+    -ms-transform-origin-x: 0;
+    left: 12px *$hd;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+
+  }
+
+  .input-field {
+    width: calc(100vw - 48px * $hd);
+    margin-top: 24px * $hd;
+    margin-left: 12px *$hd;
+    border: none;
+    font-size: 16px * $hd;
+    line-height: 18px * $hd;
+    font-weight: 400;
+    height: 20px * $hd;
+    color: #0B0C0D;
+    caret-color: #0B0C0D;
+    background-color: white;
+    -webkit-text-fill-color: #0B0C0D;
+    opacity: 1
+  }
+
+  .input-field::-webkit-resizer {
+    display: none;
+  }
+
+
+  .right-icon {
+    width: 20px * $hd;
+    height: 20px * $hd;
+    position: absolute;
+    top: 17px * $hd;
+    right: 12px * $hd;
+    z-index: 4;
+  }
+
+  .clear-icon {
+    width: 16px * $hd;
+    height: 16px * $hd;
+    position: absolute;
+    top: 26px * $hd;
+    right: 12px * $hd;
+    z-index: 4;
+  }
+
+
+}
+
+.text-error-input-animated {
+  color: #FF2C00;
+  font-size: 12px * $hd;
+  font-weight: 400;
+  margin-left: 12px * $hd;
+  height: 12px * $hd;
+}

@@ -1,0 +1,69 @@
+- command
+build ios: vnmf build --type h5 --watch 
+      and: (yarn)/(npm run) dev:h5
+
+- coding convention: 
+1. Lưu ý
+- Dự án có sử dụng .tsx để code, bắt buộc tất cả các tên file đều phải có đuôi .tsx 
+- Với file CSS Preprocessor, chúng ta sử dụng SASS/SCSS có đuôi file là .scss
+- Bắt buộc khai báo interface/type cho 1 object {}
+- Cách đặt tên
+    Với biến toàn cục: _<Tên biến> (vd: _listAcount)
+    Với func toàn cục: _<Tên func> (vd: _doLogin)
+    Với thư mục: đặt tên theo kiểu camel case (vd: loanClose, loanOpen)
+    Với tên file: viết hoa các chữ cái đầu tiên của 1 từ (vd: TransferScreen.tsx) ngoại trừ index.xxx
+    Với Popup đặt tên tiền tố là Popup
+    Với các item trong 1 list đặt tên hậu tố là Item
+    Với các custom component đặt hậu tố là View
+    Với các class là base thì đặt tiền tố là B (ví dụ Button thì là BButton)
+- Sử dụng class API.tsx function _storage để lưu trữ/xoá/sửa dữ liệu local dưới dạng key, (dữ liệu sẽ được mã hoá cả key và value khi xuống local)
+- Sử dụng các class colors, images, strings(), để làm việc tương ứng với chức năng của nó, (có node bên dưới case thư mục)
+- file global.tsx sẽ chứa các dữ liệu toàn cục của app: như các biến để tham chiếu đến class của screen, các dữ liệu của device và các dữ liệu ít thay đổi của app
+- Làm sao để request 1 api ?
+    Khai báo func và api trong file: API.tsx (format đã có trong file)
+- Code: khai báo style: viết tên các className css theo kiểu "home-screen","detail-hotel-screen",
+- Cách thức commit code
+  //// đọc tài liệu git flow: https://docs.google.com/document/d/1js7fAkSPLzfibvN0Xla8-6IfKm5vJUwOjwZPUwazz8E/edit
+   
+
+
+2. Cấu trúc thư mục
+
+/src
+../assets
+../assets/fonts/ 
+../assets/images/ /*chứa toàn bộ hình ảnh của app, lấy định dạng theo ios: file.png, file@2x.png, file@3x.png*/
+../common/constant.tsx: để chứa các storage key.... 
+../config/*tên dự án*.config.js : để chứa các config
+
+
+../components /*Thư mục này để các component dùng lại như BButton, BImage */
+../pages /* Chứa các pages screen như home,detailHotel,...
+
+../network
+../network/API.tsx /* chứa các khai báo về api, mỗi request là 1 func, có url, params */
+../network/Type.tsx /* khai báo các interface
+
+../redux /* global state data */
+/// TODO
+
+../res
+../res/language/ /*chứa các file ngôn ngữ, vi, en, ...*/
+../res/colors.tsx /* sử dụng để lấy và khai báo màu cho toàn bộ ứng dụng, bắt buộc sử dụng colors. để lấy màu */
+../res/images.tsx /* sử dụng để lấy và khai báo images cho toàn bộ ứng dụng, bắt buộc sử dụng images. để lấy image */
+
+
+../res/strings.tsx /* sử dụng để lấy và khai báo strings() cho toàn bộ ứng dụng, bắt buộc sử dụng strings(). để lấy string */
+
+../utils
+
+3.Cấu hình dự án: 
+- Khi sử dụng Library define 1 version cố định trong package.json (bỏ các dấu ^ đi ở chỗ version) 
+- Ảnh mình chỉ cần add vào folder src/asset/images và ghi tên đúng cú pháp rồi nhập command là npm run genimg là sẽ tự động import source ảnh vào file res/images.tsx
+- Nếu có file genMVVM.js rồi thì script để tạo 1 lúc 3 file theo mô hình MVVM, cú pháp cơ bản sẽ là: 
+node genMVVM src/pages/"địa chỉ file" "tên screen"
+
+
+https://vnmf-docs.vnpaytest.vn/vi/introduce/
+https://nervjs.github.io/taro-docs/en/
+https://git.vnpay.vn/

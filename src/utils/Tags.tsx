@@ -1,0 +1,8 @@
+export const FEE_SERVICE = {
+  BOOKING_CADDIE: "BOOKING_CADDIE",
+  MEMBER_CARD: "MEMBER_CARD",
+};
+export const MEMBER_KIND = {
+  VISITOR: "VISITOR",
+  MEMBER: "MEMBER",
+};

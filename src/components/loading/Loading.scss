@@ -1,0 +1,49 @@
+@import "~@vnmfify/core/styles/prefix";
+@import "~@vnmfify/core/styles/variables";
+@import "../../styles/prefix";
+
+.content-loading {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  z-index: 10000;
+  background-color: rgba(88, 88, 88, 0.3);
+
+  .loader-loading {
+    position: relative;
+    width: 48px *$hd;
+    height: 48px *$hd;
+  }
+
+  .loader-loading::before,
+  .loader-loading::after {
+    content: "";
+    border-radius: 50%;
+    width: 48px *$hd;
+    height: 48px *$hd;
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 5px *$hd 1px *$hd rgba(0, 0, 0, 0.3) inset;
+  }
+
+  .loader-loading:after {
+    box-shadow: 0 2px *$hd 0 #024C3E inset;
+    animation: rotate 1s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0)
+    }
+
+    100% {
+      transform: rotate(360deg)
+    }
+  }
+
+}
