@@ -10,4 +10,3 @@ export default defineAppConfig({
     navigationBarTextStyle: 'black'
   }
 })
-  

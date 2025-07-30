@@ -5,7 +5,7 @@ import { SDKLoading } from "./components/loading";
 import SDKAlert from "./components/alert";
 import { store } from "./redux/store/store";
 import api from "./network/API";
-// import eruda from "eruda";
+import eruda from "eruda";
 import { SDK_GOLF_STORAGE_FIELDS, _global } from "./global";
 import Vnmf from "@vnxjs/vnmf";
 import moment from "moment";
@@ -39,10 +39,10 @@ init();
 
 let el = document.createElement("div");
 document.body.appendChild(el);
-// eruda.init({
-//   container: el,
-//   tool: ["console", "elements"],
-// });
+eruda.init({
+  container: el,
+  tool: ["console", "elements"],
+});
 
 // var oldLog = console.error;
 

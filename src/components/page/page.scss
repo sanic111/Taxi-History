@@ -19,7 +19,11 @@
 //}
 
 .#{$app-prefix}page {
- background-color: black;
+  //height: 100%;
+  //
+  //.#{$demo-prefix}page__content{
+  //  height: 100%;
+  //}
 
   &__nav {
     position: relative;
